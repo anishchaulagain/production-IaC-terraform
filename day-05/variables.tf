@@ -28,3 +28,12 @@ variable "allowed_region"{
         "us-west-1"
     ]
 }
+
+variable "allowed_vm_types"{
+    type = list(string)
+    default = [
+        "t3.micro",
+        "t3.small",
+        "t3.medium"
+    ]
+}
