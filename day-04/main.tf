@@ -38,3 +38,8 @@ resource "aws_s3_bucket" "prod-bucket-s3-v1" {
     Environment = var.environment
   }
 }
+
+output "prod-bucket-s3-v1" {
+  value = aws_s3_bucket.prod-bucket-s3-v1.bucket
+}
+
