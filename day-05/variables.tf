@@ -12,6 +12,11 @@ variable "ec2-instance"{
     default = {
         ami = "resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
         instance_type = "t3.micro"
-        count = 1
+        count = 2
     }
+    type = object({
+        ami = string
+        instance_type = string
+        count = number
+    })
 }
