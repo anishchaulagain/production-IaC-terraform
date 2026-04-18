@@ -20,3 +20,11 @@ variable "ec2-instance"{
         count = number
     })
 }
+
+variable "allowed_region"{
+    type = set(string)
+    default = [
+        "us-east-1",
+        "us-west-1"
+    ]
+}
