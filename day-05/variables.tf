@@ -38,20 +38,20 @@ variable "allowed_vm_types"{
     ]
 }
 
-variable "ingress_rules"{
-    type = tuple(number, number, string, list(string))
-    default = [
-        {
-            from_port = 22
-            to_port = 22
-            protocol = "tcp"
-            cidr_blocks = ["0.0.0.0/0"]
-        },
-        {
-            from_port = 80
-            to_port = 80
-            protocol = "tcp"
-            cidr_blocks = ["0.0.0.0/0"]
-        }
-    ]
-}
+# variable "ingress_rules"{
+#     type = list(map(string))
+#     default = [
+#         {
+#             from_port = 22
+#             to_port = 22
+#             protocol = "tcp"
+#             cidr_blocks = ["0.0.0.0/0"]
+#         },
+#         {
+#             from_port = 80
+#             to_port = 80
+#             protocol = "tcp"
+#             cidr_blocks = ["0.0.0.0/0"]
+#         }
+#     ]
+# }
